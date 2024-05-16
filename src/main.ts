@@ -8,12 +8,6 @@ let specialIndividual: VIP = "Hassan";
 
 specialIndividual = 1000;
 
-const promise = new Promise((resolve, reject) => {
-  resolve(console.log("done"));
-
-  reject(new Error("..."));
-});
-
 type Buttons = {
   up: string;
   right: string;
@@ -39,3 +33,7 @@ getActions({
   bottom: "Crouch",
   x: true,
 });
+
+async function consolelogger() {
+  return console.log("Hello World!");
+}

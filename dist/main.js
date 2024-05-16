@@ -1,11 +1,4 @@
 "use strict";
-let gMan = "Hossam";
-let specialIndividual = "Hassan";
-specialIndividual = 1000;
-const promise = new Promise((resolve, reject) => {
-    resolve(console.log("done"));
-    reject(new Error("..."));
-});
 function getActions(btns) {
     console.log(`Actions For Button Up is ${btns.up}`);
     console.log(`Actions For Button Up is ${btns.right}`);
@@ -19,4 +12,8 @@ getActions({
     bottom: "Crouch",
     x: true,
 });
+async function logger() {
+    return console.log("Hello Wolrd!");
+}
+logger();
 //# sourceMappingURL=main.js.map

@@ -42,6 +42,8 @@ const cartModal = document.getElementById("cartModal");
 
 // Get the cart counter element
 const cartCounter = document.getElementById("cartCounter");
+// When the user clicks on <span> (x) to close the modal, hide the modal
+const closeBtn = document.querySelector(".close");
 
 function listItemsSelected() {
   listItems.forEach((item) => {
@@ -78,7 +80,7 @@ function hideModal() {
 searchBar.addEventListener("click", showModal);
 
 // When the user clicks on <span> (x) or outside of the modal, close the modal
-window.addEventListener("click", (event) => {
+closeBtn.addEventListener("click", (event) => {
   if (event.target == modal || event.target.classList.contains("close")) {
     hideModal();
   }
@@ -111,8 +113,6 @@ cartIcon.addEventListener("click", () => {
   }
 });
 
-// When the user clicks on <span> (x) to close the modal, hide the modal
-const closeBtn = document.querySelector(".close");
 closeBtn.addEventListener("click", hideCartModal);
 
 // Update cart counter

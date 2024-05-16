@@ -1,13 +1,3 @@
-type into = string;
-
-let gMan: string = "Hossam";
-
-type VIP = string | number;
-
-let specialIndividual: VIP = "Hassan";
-
-specialIndividual = 1000;
-
 type Buttons = {
   up: string;
   right: string;
@@ -34,6 +24,8 @@ getActions({
   x: true,
 });
 
-async function consolelogger() {
-  return console.log("Hello World!");
+async function logger() {
+  return console.log("Hello Wolrd!");
 }
+
+logger();

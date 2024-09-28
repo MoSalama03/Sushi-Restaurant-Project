@@ -43,7 +43,7 @@ const cartModal = document.getElementById("cartModal");
 // Get the cart counter element
 const cartCounter = document.getElementById("cartCounter");
 // When the user clicks on <span> (x) to close the modal, hide the modal
-const closeBtn = document.querySelector(".close");
+const closeBtns = document.querySelectorAll(".close");
 
 function listItemsSelected() {
   listItems.forEach((item) => {
@@ -80,7 +80,7 @@ function hideModal() {
 searchBar.addEventListener("click", showModal);
 
 // When the user clicks on <span> (x) or outside of the modal, close the modal
-closeBtn.addEventListener("click", (event) => {
+closeBtns[0].addEventListener("click", (event) => {
   if (event.target == modal || event.target.classList.contains("close")) {
     hideModal();
   }
@@ -98,22 +98,20 @@ function showCartModal() {
 // Function to hide the cart modal
 function hideCartModal() {
   cartModal.classList.remove("show"); // Remove the 'show' class to animate modal disappearance
+  cartIcon.classList.remove("active"); // Remove 'active' class from cart icon
   setTimeout(() => {
     cartModal.style.display = "none"; // Hide the modal after animation completes
   }, 300); // Duration of transition
-  cartIcon.classList.remove("active"); // Remove 'active' class from cart icon
 }
 
 // When the user clicks the cart icon, show/hide the cart modal
 cartIcon.addEventListener("click", () => {
-  if (cartModal.style.display === "block") {
-    hideCartModal();
-  } else {
-    showCartModal();
-  }
+  showCartModal();
 });
 
-closeBtn.addEventListener("click", hideCartModal);
+closeBtns[1].addEventListener("click", () => {
+  hideCartModal();
+});
 
 // Update cart counter
 function updateCartCounter(count) {

@@ -1,31 +1,19 @@
-type Buttons = {
-  up: string;
-  right: string;
-  left: string;
-  bottom: string;
-};
-
-type Last = Buttons & {
-  x: Boolean;
-};
-
-function getActions(btns: Last) {
-  console.log(`Actions For Button Up is ${btns.up}`);
-  console.log(`Actions For Button Up is ${btns.right}`);
-  console.log(`Actions For Button Up is ${btns.left}`);
-  console.log(`Actions For Button Up is ${btns.bottom}`);
+function logging(msg: string): void {
+  console.log(msg);
+  return;
 }
 
-getActions({
-  up: "Jump",
-  right: "Go Right",
-  left: "Go Left",
-  bottom: "Crouch",
-  x: true,
-});
+console.log(logging("Iam a Message"));
+console.log("Test");
 
-async function logger() {
-  return console.log("Hello Wolrd!");
+const fail = (msg: string): never => {
+  throw new Error(msg);
+};
+
+function alwaysLog(name: string): never {
+  while (true) {
+    console.log(name);
+  }
 }
 
-logger();
+console.log(alwaysLog("Muhammed"));

@@ -1,19 +1,17 @@
 "use strict";
-function getActions(btns) {
-    console.log(`Actions For Button Up is ${btns.up}`);
-    console.log(`Actions For Button Up is ${btns.right}`);
-    console.log(`Actions For Button Up is ${btns.left}`);
-    console.log(`Actions For Button Up is ${btns.bottom}`);
+function logging(msg) {
+    console.log(msg);
+    return;
 }
-getActions({
-    up: "Jump",
-    right: "Go Right",
-    left: "Go Left",
-    bottom: "Crouch",
-    x: true,
-});
-async function logger() {
-    return console.log("Hello Wolrd!");
+console.log(logging("Iam a Message"));
+console.log("Test");
+const fail = (msg) => {
+    throw new Error(msg);
+};
+function alwaysLog(name) {
+    while (true) {
+        console.log(name);
+    }
 }
-logger();
+console.log(alwaysLog("Muhammed"));
 //# sourceMappingURL=main.js.map

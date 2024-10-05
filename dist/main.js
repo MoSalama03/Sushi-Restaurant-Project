@@ -23,4 +23,6 @@ let lvl = "Easy";
 if (lvl === "Easy") {
     console.log(`The Level is ${lvl} And Number of Seconds ${Level.Medium}`);
 }
+let data = "1000";
+console.log(data.repeat(3));
 //# sourceMappingURL=main.js.map

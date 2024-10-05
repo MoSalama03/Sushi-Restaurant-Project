@@ -26,6 +26,5 @@ if (lvl === "Easy") {
   console.log(`The Level is ${lvl} And Number of Seconds ${Level.Medium}`);
 }
 
-let myImg = <HTMLImageElement>document.getElementById("img");
-
-console.log(myImg.src);
+let data: string = "1000";
+console.log(data.repeat(3));

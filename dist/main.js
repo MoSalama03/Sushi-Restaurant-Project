@@ -1,28 +1,10 @@
 "use strict";
-function getHardSeconds() {
-    return 3;
+// let all: number | string = 100;
+function getActions(btns) {
+    console.log(`Hello ${btns.one}`);
+    console.log(`Hello ${btns.two}`);
+    console.log(`Hello ${btns.three}`);
+    console.log(`Hello ${btns.five}`);
 }
-const KIDS = 15;
-const EASY = 9;
-const MEDIUM = 6;
-const HARD = 3;
-var Kids;
-(function (Kids) {
-    Kids[Kids["Five"] = 25] = "Five";
-    Kids[Kids["Seven"] = 20] = "Seven";
-    Kids[Kids["Ten"] = 15] = "Ten";
-})(Kids || (Kids = {}));
-var Level;
-(function (Level) {
-    Level[Level["Kid"] = 15] = "Kid";
-    Level[Level["Easy"] = 9] = "Easy";
-    Level[Level["Medium"] = 6] = "Medium";
-    Level[Level["Hard"] = getHardSeconds()] = "Hard";
-})(Level || (Level = {}));
-let lvl = "Easy";
-if (lvl === "Easy") {
-    console.log(`The Level is ${lvl} And Number of Seconds ${Level.Medium}`);
-}
-let data = "1000";
-console.log(data.repeat(3));
+getActions({ one: "String", two: 100, three: true, five: false });
 //# sourceMappingURL=main.js.map

@@ -1,30 +1,26 @@
-function getHardSeconds(): number {
-  return 3;
+// let all: number | string = 100;
+
+type A = {
+  one: string;
+  two: number;
+  three: boolean;
+};
+
+type B = A & {
+  four: number;
+};
+
+type C = {
+  five: boolean;
+};
+
+type mix = A & C;
+
+function getActions(btns: mix) {
+  console.log(`Hello ${btns.one}`);
+  console.log(`Hello ${btns.two}`);
+  console.log(`Hello ${btns.three}`);
+  console.log(`Hello ${btns.five}`);
 }
 
-const KIDS = 15;
-const EASY = 9;
-const MEDIUM = 6;
-const HARD = 3;
-
-enum Kids {
-  Five = 25,
-  Seven = 20,
-  Ten = 15,
-}
-
-enum Level {
-  Kid = Kids.Ten,
-  Easy = 9,
-  Medium = Easy - 3,
-  Hard = getHardSeconds(),
-}
-
-let lvl: string = "Easy";
-
-if (lvl === "Easy") {
-  console.log(`The Level is ${lvl} And Number of Seconds ${Level.Medium}`);
-}
-
-let data: string = "1000";
-console.log(data.repeat(3));
+getActions({ one: "String", two: 100, three: true, five: false });

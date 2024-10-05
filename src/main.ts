@@ -1,19 +1,31 @@
-function logging(msg: string): void {
-  console.log(msg);
-  return;
+function getHardSeconds(): number {
+  return 3;
 }
 
-console.log(logging("Iam a Message"));
-console.log("Test");
+const KIDS = 15;
+const EASY = 9;
+const MEDIUM = 6;
+const HARD = 3;
 
-const fail = (msg: string): never => {
-  throw new Error(msg);
-};
-
-function alwaysLog(name: string): never {
-  while (true) {
-    console.log(name);
-  }
+enum Kids {
+  Five = 25,
+  Seven = 20,
+  Ten = 15,
 }
 
-console.log(alwaysLog("Muhammed"));
+enum Level {
+  Kid = Kids.Ten,
+  Easy = 9,
+  Medium = Easy - 3,
+  Hard = getHardSeconds(),
+}
+
+let lvl: string = "Easy";
+
+if (lvl === "Easy") {
+  console.log(`The Level is ${lvl} And Number of Seconds ${Level.Medium}`);
+}
+
+let myImg = <HTMLImageElement>document.getElementById("img");
+
+console.log(myImg.src);

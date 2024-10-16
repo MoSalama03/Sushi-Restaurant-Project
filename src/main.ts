@@ -1,26 +1,26 @@
-// let all: number | string = 100;
+/* 
+  Type Annotations With Object
+*/
 
-type A = {
-  one: string;
-  two: number;
-  three: boolean;
+let myObject: {
+  readonly username: string;
+  id: number;
+  hire?: boolean;
+  skills: {
+    one: string;
+    two: string;
+  };
+} = {
+  username: "Mohammed",
+  id: 100,
+  skills: {
+    one: "HTMl",
+    two: "CSS",
+  },
 };
 
-type B = A & {
-  four: number;
-};
+myObject.id = 101;
+myObject.hire = false;
 
-type C = {
-  five: boolean;
-};
-
-type mix = A & C;
-
-function getActions(btns: mix) {
-  console.log(`Hello ${btns.one}`);
-  console.log(`Hello ${btns.two}`);
-  console.log(`Hello ${btns.three}`);
-  console.log(`Hello ${btns.five}`);
-}
-
-getActions({ one: "String", two: 100, three: true, five: false });
+console.log(myObject);
+console.log(myObject.skills);

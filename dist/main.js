@@ -1,10 +1,17 @@
 "use strict";
-// let all: number | string = 100;
-function getActions(btns) {
-    console.log(`Hello ${btns.one}`);
-    console.log(`Hello ${btns.two}`);
-    console.log(`Hello ${btns.three}`);
-    console.log(`Hello ${btns.five}`);
-}
-getActions({ one: "String", two: 100, three: true, five: false });
+/*
+  Type Annotations With Object
+*/
+let myObject = {
+    username: "Mohammed",
+    id: 100,
+    skills: {
+        one: "HTMl",
+        two: "CSS",
+    },
+};
+myObject.id = 101;
+myObject.hire = false;
+console.log(myObject);
+console.log(myObject.skills);
 //# sourceMappingURL=main.js.map

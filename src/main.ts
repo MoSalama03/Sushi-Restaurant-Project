@@ -1,26 +1,21 @@
-/* 
-  Type Annotations With Object
-*/
-
-let myObject: {
-  readonly username: string;
+interface User {
   id: number;
-  hire?: boolean;
-  skills: {
-    one: string;
-    two: string;
-  };
-} = {
-  username: "Mohammed",
+  username: string;
+  country: string;
+}
+
+let user: User = {
   id: 100,
-  skills: {
-    one: "HTMl",
-    two: "CSS",
-  },
+  username: "Muhammed",
+  country: "Egypt",
 };
 
-myObject.id = 101;
-myObject.hire = false;
+console.log(user);
 
-console.log(myObject);
-console.log(myObject.skills);
+function getData(data: User) {
+  console.log(`Id Is ${data.id}`);
+  console.log(`Username Is ${data.username}`);
+  console.log(`Country Is ${data.country}`);
+}
+
+getData({ id: 200, username: "Muhammed", country: "UAE" });

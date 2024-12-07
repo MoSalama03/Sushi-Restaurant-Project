@@ -1,17 +1,14 @@
 "use strict";
-/*
-  Type Annotations With Object
-*/
-let myObject = {
-    username: "Mohammed",
+let user = {
     id: 100,
-    skills: {
-        one: "HTMl",
-        two: "CSS",
-    },
+    username: "Muhammed",
+    country: "Egypt",
 };
-myObject.id = 101;
-myObject.hire = false;
-console.log(myObject);
-console.log(myObject.skills);
+console.log(user);
+function getData(data) {
+    console.log(`Id Is ${data.id}`);
+    console.log(`Username Is ${data.username}`);
+    console.log(`Country Is ${data.country}`);
+}
+getData({ id: 200, username: "Muhammed", country: "UAE" });
 //# sourceMappingURL=main.js.map

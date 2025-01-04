@@ -91,15 +91,15 @@ function showCartModal() {
   cartModal.style.display = "block"; // Display the modal
   setTimeout(() => {
     cartModal.classList.add("show"); // Add the 'show' class to animate modal appearance
-  }, 10); // Delay to ensure smooth transition
+  }, 12); // Delay to ensure smooth transition
   cartIcon.classList.add("active"); // Add 'active' class to cart icon
 }
 
 // Function to hide the cart modal
 function hideCartModal() {
   cartModal.classList.remove("show"); // Remove the 'show' class to animate modal disappearance
-  cartIcon.classList.remove("active"); // Remove 'active' class from cart icon
   setTimeout(() => {
+    cartIcon.classList.remove("active"); // Remove 'active' class from cart icon
     cartModal.style.display = "none"; // Hide the modal after animation completes
   }, 300); // Duration of transition
 }

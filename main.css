@@ -40,7 +40,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin: 0 0 5.4rem 0;
-  padding: 3% 0;
+  padding: 2% 0;
 }
 
 .navbar {
@@ -219,11 +219,10 @@ img {
 }
 
 .itms-below-img {
-  display: grid;
-  grid-gap: 3em;
-  grid-template-columns: repeat(2, 265px);
+  display: flex;
+  gap: 35px;
   position: absolute;
-  bottom: 3.5vw;
+  bottom: 2.3vw;
   left: 6vw;
 }
 
@@ -232,6 +231,7 @@ img {
   border-radius: 25px;
   box-shadow: 7px 35px 51px 0 #00000024;
   background-color: #fff;
+  width: 17em;
 }
 
 .food-text {
@@ -242,10 +242,8 @@ img {
 }
 
 .sushi-below-imgs {
-  width: 75%;
   border-radius: 25px;
   position: relative;
-  left: 8px;
 }
 
 /* Add animation for modal content */

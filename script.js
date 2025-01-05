@@ -22,7 +22,7 @@ const lastRemaining = function (n) {
   return head;
 };
 
-console.log(lastRemaining(9));
+console.log(lastRemaining(20));
 
 // get elements grouped up in a list
 const listItems = document.querySelectorAll(".navbar-item");
@@ -91,14 +91,14 @@ function showCartModal() {
   cartModal.style.display = "block"; // Display the modal
   setTimeout(() => {
     cartModal.classList.add("show"); // Add the 'show' class to animate modal appearance
-  }, 12); // Delay to ensure smooth transition
+  }, 10); // Delay to ensure smooth transition
   cartIcon.classList.add("active"); // Add 'active' class to cart icon
 }
 
 // Function to hide the cart modal
 function hideCartModal() {
-  cartModal.classList.remove("show"); // Remove the 'show' class to animate modal disappearance
   setTimeout(() => {
+    cartModal.classList.remove("show"); // Remove the 'show' class to animate modal disappearance 
     cartIcon.classList.remove("active"); // Remove 'active' class from cart icon
     cartModal.style.display = "none"; // Hide the modal after animation completes
   }, 300); // Duration of transition

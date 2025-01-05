@@ -247,7 +247,7 @@ img {
 }
 
 /* Add animation for modal content */
-@keyframes modalFadeIn {
+@keyframes FadeIn {
   from {
     opacity: 0;
   }
@@ -256,7 +256,7 @@ img {
   }
 }
 
-@keyframes modalFadeOut {
+@keyframes FadeOut {
   from {
     opacity: 1;
   }
@@ -266,9 +266,9 @@ img {
 }
 
 .modal-content.fadeIn {
-  animation: modalFadeIn 0.3s ease forwards;
+  animation: FadeIn 0.3s ease forwards;
 }
 
 .modal-content.fadeOut {
-  animation: modalFadeOut 0.3s ease forwards;
+  animation: FadeOut 0.3s ease forwards;
 }
